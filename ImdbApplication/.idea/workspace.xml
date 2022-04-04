@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fa8fd7-99d3-42f0-a92e-3b7421fee8cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/oneday/ImdbApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/ImdbApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/client/ImdbClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/model/Movies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/service/ParseMovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/ImdbApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/ImdbApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/oneday/ImdbApplication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +36,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
+    <option name="foldersAlwaysOnTop" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -39,10 +47,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.java.com.alura.challenge" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ImdbApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="main.java.com.alura.challenge.oneday.ImdbApplication" />
+      <option name="MAIN_CLASS_NAME" value="main.java.com.alura.challenge.ImdbApplication" />
       <module name="ImdbApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,5 +84,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
