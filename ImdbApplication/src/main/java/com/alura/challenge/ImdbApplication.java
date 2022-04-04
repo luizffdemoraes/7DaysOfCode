@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ImdbApplication {
 
-    private static ImdbClient client = new ImdbClient("k_7phe7j4o");
+    private static ImdbClient client = new ImdbClient("<apiKey>");
 
 
     public static void main(String[] args) {
