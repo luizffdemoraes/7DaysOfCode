@@ -1,14 +1,13 @@
 package main.java.com.alura.challenge.service;
 
-import main.java.com.alura.challenge.model.Movies;
+import main.java.com.alura.challenge.model.Movie;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ParseMovieService {
 
-    public List<Movies> parseMovie(String responseIMDB) {
+    public List<Movie> parseMovie(String responseIMDB) {
 
         int posicaoInicial = responseIMDB.indexOf("[") + 1;
         int posicaoFinal = responseIMDB.lastIndexOf("]");
@@ -30,21 +29,20 @@ public class ParseMovieService {
         System.out.println(imdbRating);
 
         // Unificando o retorno em um Objeto de filmes
-        List<Movies> moviesList = constructMovie(title, year, image, imdbRating);
+        List<Movie> moviesList = constructMovie(title, year, image, imdbRating);
 
         return moviesList;
     }
 
-    private List<Movies> constructMovie(List<String> title, List<String> year, List<String> image, List<String> imdbRating) {
-        List<Movies> moviesList = new ArrayList<>();
+    private List<Movie> constructMovie(List<String> title, List<String> year, List<String> image, List<String> imdbRating) {
+        List<Movie> moviesList = new ArrayList<>();
 
         for (int i = 0; i < title.size(); i++) {
-
-            Movies movie = new Movies();
-            movie.setTitles(title.get(i));
+            Movie movie = new Movie();
+            movie.setTitle(title.get(i));
             movie.setYear(year.get(i));
-            movie.setUrlImages(image.get(i));
-            movie.setImDbRating(imdbRating.get(i));
+            movie.setUrlImage(image.get(i));
+            movie.setRating(imdbRating.get(i));
             moviesList.add(movie);
         }
 
