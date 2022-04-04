@@ -60,3 +60,41 @@ Para finalizar esse desafio criei um objeto list de movie para unir os retorno.
 
 Retorno: 
 [Movies{titles='The Shawshank Redemption', urlImages='https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,3,128,176_AL_.jpg', year='1994', imDbRating='9.2'}, Movies{titles='The Godfather', urlImages='https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,1,128,176_AL_.jpg', year='1972', imDbRating='9.2'}, Movies{titles='The Dark Knight', urlImages='https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX128_CR0,3,128,176_AL_.jpg', year='2008', imDbRating='9.0'}, ...]
+
+
+
+## 3 - Desafio
+
+- Modelar, ou pelo menos iniciar uma modelagem melhor do seu código.
+
+## Solução
+
+Criar uma classe filme (Movie) deve ter os seguintes atributos:
+
+- título (title)
+- URL da imagem do pôster (urlImage)
+- nota (rating)
+- ano (year)
+
+Agora em vez de ter várias listas diferentes, uma para cada atributo do filme, é bem melhor organizar isso em uma única List<Movie>, onde **cada filme encapsula os seus próprios dados**.
+
+
+
+## 4 - Desafio
+
+- Gerar uma página HTML a partir da lista de objetos que você já tem no seu código Java.
+
+## Solução
+
+Criar uma página HTML onde você possa ver as informações sobre o filme, incluindo o pôster, algo como:
+
+
+
+![image-20220404014148151](C:\Users\luiz9\AppData\Roaming\Typora\typora-user-images\image-20220404014148151.png)
+
+***Passo-a-passo:***
+
+- Crie uma nova classe HTMLGenerator, que irá receber no construtor um Writer (por exemplo, PrintWriter)
+
+- Adicione um método chamado ‘generate’, que irá receber uma List<Movie>. Nesse método, gere todo o HTML a partir da lista, usando as informações do objeto. Você pode usar métodos privados para delegar responsabilidades.
+  *(Obs: Você deve criar e fechar o Writer no método main)*
