@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fa8fd7-99d3-42f0-a92e-3b7421fee8cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/web/HtmlGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/ImdbApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/ImdbApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/client/ImdbClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/web/HtmlGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/web/HtmlGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/ImdbApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/ImdbApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/client/ImdbClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/client/ImdbApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/service/ParseMovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/service/ImdbMovieJsonParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

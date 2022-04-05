@@ -5,16 +5,20 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.Scanner;
 
-public class ImdbClient {
+public class ImdbApiClient {
 
-    String apiKey; // <apiKey>
+    private String apiKey; // <apiKey>
 
-    public ImdbClient(String apiKey) {
+    public ImdbApiClient() {
+    }
+
+    public ImdbApiClient(String apiKey) {
         this.apiKey = apiKey;
     }
 
-    public String callIMDB() {
+    private String getBody() {
 
         // HttpResponse é o retorno da requisicao
         try {
@@ -41,5 +45,13 @@ public class ImdbClient {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public String requestApiKey() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite sua apiKey:");
+        this.apiKey = sc.nextLine();
+        sc.close();
+        return this.getBody();
     }
 }

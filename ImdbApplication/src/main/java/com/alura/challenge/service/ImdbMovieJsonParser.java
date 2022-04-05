@@ -5,7 +5,7 @@ import main.java.com.alura.challenge.model.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParseMovieService {
+public class ImdbMovieJsonParser {
 
     public List<Movie> parseMovie(String responseIMDB) {
 
@@ -30,6 +30,7 @@ public class ParseMovieService {
 
         // Unificando o retorno em um Objeto de filmes
         List<Movie> moviesList = constructMovie(title, year, image, imdbRating);
+        System.out.println("Lista de Filmes: " + moviesList);
 
         return moviesList;
     }
@@ -38,11 +39,7 @@ public class ParseMovieService {
         List<Movie> moviesList = new ArrayList<>();
 
         for (int i = 0; i < title.size(); i++) {
-            Movie movie = new Movie();
-            movie.setTitle(title.get(i));
-            movie.setYear(year.get(i));
-            movie.setUrlImage(image.get(i));
-            movie.setRating(imdbRating.get(i));
+            Movie movie = new Movie(title.get(i), year.get(i), image.get(i), imdbRating.get(i));
             moviesList.add(movie);
         }
 

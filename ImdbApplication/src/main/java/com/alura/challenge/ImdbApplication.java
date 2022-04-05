@@ -1,9 +1,9 @@
 package main.java.com.alura.challenge;
 
 
-import main.java.com.alura.challenge.client.ImdbClient;
+import main.java.com.alura.challenge.client.ImdbApiClient;
 import main.java.com.alura.challenge.model.Movie;
-import main.java.com.alura.challenge.service.ParseMovieService;
+import main.java.com.alura.challenge.service.ImdbMovieJsonParser;
 import main.java.com.alura.challenge.web.HtmlGenerator;
 
 import java.io.FileNotFoundException;
@@ -13,14 +13,13 @@ import java.util.List;
 
 public class ImdbApplication {
 
-    private static ImdbClient client = new ImdbClient("<apiKey>");
-
-
     public static void main(String[] args) throws FileNotFoundException {
-        ParseMovieService parseMovieService = new ParseMovieService();
 
-        String listMovie = client.callIMDB();
-        List<Movie> movies = parseMovieService.parseMovie(listMovie);
+        ImdbApiClient client = new ImdbApiClient();
+        ImdbMovieJsonParser imdbMovieJsonParser = new ImdbMovieJsonParser();
+
+        String listMovie = client.requestApiKey();
+        List<Movie> movies = imdbMovieJsonParser.parseMovie(listMovie);
 
         System.out.println("Gerando HTML");
         PrintWriter writer = new PrintWriter("movie.html");

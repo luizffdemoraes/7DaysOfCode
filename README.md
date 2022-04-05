@@ -95,6 +95,22 @@ Criar uma página HTML onde você possa ver as informações sobre o filme, incl
 ***Passo-a-passo:***
 
 - Crie uma nova classe HTMLGenerator, que irá receber no construtor um Writer (por exemplo, PrintWriter)
-
 - Adicione um método chamado ‘generate’, que irá receber uma List<Movie>. Nesse método, gere todo o HTML a partir da lista, usando as informações do objeto. Você pode usar métodos privados para delegar responsabilidades.
   *(Obs: Você deve criar e fechar o Writer no método main)*
+
+
+
+## 5 - Desafio
+
+- Primeira tarefa neste desafio será encapsular a chamada da API dentro de uma nova classe. Você pode chamar essa classe de ImdbApiClient.
+- Segunda tarefa:  Criar uma nova classe para o código que faz o parseamento do JSON. Você pode chamar essa classe de ImdbMovieJsonParser.
+
+## Solução
+
+Para a primeira tarefa (de encapsular a chamada da API), ela deverá ter um construtor que irá receber a chave da API e um método para executar a requisição, algo como:
+
+String apiKey = "<sua chave>";
+
+String json = new ImdbApiClient(apiKey).getBody(); 
+
+E o método getBody() executará a requisição HTTP.
