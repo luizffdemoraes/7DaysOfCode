@@ -89,7 +89,7 @@ Agora em vez de ter várias listas diferentes, uma para cada atributo do filme, 
 Criar uma página HTML onde você possa ver as informações sobre o filme, incluindo o pôster, algo como:
 
 <h1 align="center">
-    <img alt="movies" title="movies" src=".github/movies.jpg" />
+    <img alt="movies" title="movies" src="github/movies.png" />
 </h1>
 
 ***Passo-a-passo:***
@@ -114,3 +114,40 @@ String apiKey = "<sua chave>";
 String json = new ImdbApiClient(apiKey).getBody(); 
 
 E o método getBody() executará a requisição HTTP.
+
+## 6 - Desafio
+
+-  O seu desafio será que o **HTML seja gerado independentemente do conteúdo em questão** (seja ele um filme, uma série, uma história em quadrinhos ou outro). Você deverá deixar o seu código mais genérico, ou seja, preparado para receber dados de outras APIs. Para isso, entram em cena as **interfaces**, que permitem implementações diferentes.
+
+  Então, vamos lá: o seu modelo deverá implementar uma nova interface que irá definir o comportamento comum de um conteúdo.
+
+## Solução
+
+Você pode chamá-la de Content, e ela poderá ter os seguintes métodos:
+
+public interface Content {
+  String title();
+  String urlImage();
+  String rating();
+  String year();
+}
+
+E a sua classe (ou record) Movie se tornará um Content, dessa forma:
+
+public class Movie implements Content {...}
+
+Sendo assim, você também poderá pensar em uma abstração para o parser de JSON. Você pode criar uma interface chamada 'JsonParser':
+
+public interface JsonParser{
+  public List<? extends Content> parse();
+}
+
+Repare que o método devolve uma lista que possui elementos do tipo <? extends Content>. Como o Movie implementa a interface Content, esse código vai funcionar!
+
+A partir daí, você poderá usar a nova interface JsonParser na classe ImdbMovieJsonParser:
+
+public class ImdbMovieJsonParser implements JsonParser{
+  //…
+}
+
+Resumindo, você criará duas abstrações: uma para o seu modelo chamado de Content e outra para o JsonParser. Basta que futuras implementações sigam essas interfaces e o seu gerador de HTML continuará funcionando! Ou seja, você desacoplou o parseamento do JSON da geração de HTML.
