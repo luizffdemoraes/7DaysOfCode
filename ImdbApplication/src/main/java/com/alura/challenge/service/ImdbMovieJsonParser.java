@@ -31,13 +31,13 @@ public class ImdbMovieJsonParser implements JsonParser {
         System.out.println(imdbRating);
 
         // Unificando o retorno em um Objeto de filmes
-        List<Movie> moviesList = constructMovie(title, year, image, imdbRating);
+        List<? extends Content> moviesList = constructMovie(title, year, image, imdbRating);
         System.out.println("Lista de Filmes: " + moviesList);
 
         return moviesList;
     }
 
-    private List<Movie> constructMovie(List<String> title, List<String> year, List<String> image, List<String> imdbRating) {
+    private List<? extends Content> constructMovie(List<String> title, List<String> year, List<String> image, List<String> imdbRating) {
         List<Movie> moviesList = new ArrayList<>();
 
         for (int i = 0; i < title.size(); i++) {

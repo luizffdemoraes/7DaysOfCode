@@ -88,9 +88,9 @@ Agora em vez de ter várias listas diferentes, uma para cada atributo do filme, 
 
 Criar uma página HTML onde você possa ver as informações sobre o filme, incluindo o pôster, algo como:
 
-
-
-![image-20220404014148151](C:\Users\luiz9\AppData\Roaming\Typora\typora-user-images\image-20220404014148151.png)
+<h1 align="center">
+    <img alt="movies" title="movies" src=".github/movies.jpg" />
+</h1>
 
 ***Passo-a-passo:***
 
