@@ -19,7 +19,7 @@ public class ImdbApplication {
         ImdbMovieJsonParser imdbMovieJsonParser = new ImdbMovieJsonParser();
 
         String listMovie = client.requestApiKey();
-        List<Movie> movies = imdbMovieJsonParser.parseMovie(listMovie);
+        List<Movie> movies = (List<Movie>) imdbMovieJsonParser.parse(listMovie);
 
         System.out.println("Gerando HTML");
         PrintWriter writer = new PrintWriter("movie.html");

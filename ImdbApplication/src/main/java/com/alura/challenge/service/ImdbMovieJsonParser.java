@@ -1,14 +1,16 @@
 package main.java.com.alura.challenge.service;
 
+import main.java.com.alura.challenge.interfaces.Content;
+import main.java.com.alura.challenge.interfaces.JsonParser;
 import main.java.com.alura.challenge.model.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImdbMovieJsonParser {
+public class ImdbMovieJsonParser implements JsonParser {
 
-    public List<Movie> parseMovie(String responseIMDB) {
-
+    @Override
+    public List<? extends Content> parse(String responseIMDB) {
         int posicaoInicial = responseIMDB.indexOf("[") + 1;
         int posicaoFinal = responseIMDB.lastIndexOf("]");
 
@@ -39,7 +41,7 @@ public class ImdbMovieJsonParser {
         List<Movie> moviesList = new ArrayList<>();
 
         for (int i = 0; i < title.size(); i++) {
-            Movie movie = new Movie(title.get(i), year.get(i), image.get(i), imdbRating.get(i));
+            Movie movie = new Movie(title.get(i), image.get(i), imdbRating.get(i), year.get(i));
             moviesList.add(movie);
         }
 

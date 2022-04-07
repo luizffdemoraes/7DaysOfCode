@@ -1,53 +1,38 @@
 package main.java.com.alura.challenge.model;
 
-public class Movie {
+import main.java.com.alura.challenge.interfaces.Content;
+
+public class Movie implements Content {
     private String title;
     private String urlImage;
     private String rating;
     private String year;
 
-
-    public Movie() {
-
-    }
-
-    public Movie(String titles, String urlImage, String year, String rating) {
+    public Movie(String titles, String urlImage, String rating, String year) {
         this.title = titles;
         this.urlImage = urlImage;
         this.rating = rating;
         this.year = year;
     }
 
-    public String getTitle() {
-        return title;
+    @Override
+    public String title() {
+        return this.title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    @Override
+    public String urlImage() {
+        return this.urlImage;
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    @Override
+    public String rating() {
+        return this.rating;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
-    }
-
-    public String getRating() {
-        return rating;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
+    @Override
+    public String year() {
+        return this.year;
     }
 
     @Override
