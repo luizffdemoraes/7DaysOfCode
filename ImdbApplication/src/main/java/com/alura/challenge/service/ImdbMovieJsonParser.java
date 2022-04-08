@@ -5,6 +5,8 @@ import main.java.com.alura.challenge.interfaces.JsonParser;
 import main.java.com.alura.challenge.model.Movie;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ImdbMovieJsonParser implements JsonParser {
@@ -44,6 +46,8 @@ public class ImdbMovieJsonParser implements JsonParser {
             Movie movie = new Movie(title.get(i), image.get(i), imdbRating.get(i), year.get(i));
             moviesList.add(movie);
         }
+
+        Collections.sort(moviesList, Comparator.comparing(Content::year));
 
         return moviesList;
     }

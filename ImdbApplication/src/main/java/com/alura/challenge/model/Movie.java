@@ -44,4 +44,9 @@ public class Movie implements Content {
                 ", year='" + year + '\'' +
                 '}';
     }
+
+    @Override
+    public int compareTo(Content c) {
+        return this.rating.compareTo(c.rating());
+    }
 }

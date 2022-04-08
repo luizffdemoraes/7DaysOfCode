@@ -1,5 +1,6 @@
 package main.java.com.alura.challenge.web;
 
+import main.java.com.alura.challenge.interfaces.Content;
 import main.java.com.alura.challenge.model.Movie;
 
 import java.io.PrintWriter;
@@ -13,7 +14,7 @@ public class HtmlGenerator {
         this.printWriter = printWriter;
     }
 
-    public void generate(List<Movie> movieList) {
+    public void generate(List<? extends Content> contentList) {
 
         printWriter.println("""
                  <html>
@@ -27,13 +28,13 @@ public class HtmlGenerator {
                      <div class="row">
                       """);
 
-        for (Movie movie : movieList) {
-            printWriter.println("<div class=\"card text-white bg-dark mb-3 ml-5 col-md-4\" style=\"max-width: 18rem;\">");
-            printWriter.println("<h4 class=\"card-header\">" + movie.title() + "</h4><div class=\"card-body\">");
-            printWriter.println("<img class\"card-img\" src=\"" + movie.urlImage() + "alt=\"" + movie.urlImage() + " width=\"200\" height=\"300\">");
-            printWriter.println("<p class=\"card-text mt-2\">Nota: " + movie.rating() + " - Ano: " + movie.year() + "</p>");
-            printWriter.println("</div></div>");
-        }
+        contentList.forEach(movie -> {
+            printWriter.println("<div class=\"card text-white bg-dark mb-3 ml-5 col-md-4\" style=\"max-width: 18rem;\">" +
+                    "<h4 class=\"card-header\">" + movie.title() + "</h4><div class=\"card-body\">" +
+                    "<img class\"card-img\" src=\"" + movie.urlImage() + "alt=\"" + movie.urlImage() + " width=\"200\" height=\"300\">" +
+                    "<p class=\"card-text mt-2\">Nota: " + movie.rating() + " - Ano: " + movie.year() + "</p></div></div>");
+
+        });
 
         printWriter.println(
                 """ 
