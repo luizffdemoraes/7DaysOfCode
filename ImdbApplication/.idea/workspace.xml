@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21fa8fd7-99d3-42f0-a92e-3b7421fee8cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/interfaces/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/interfaces/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/model/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/web/HtmlGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ImdbApplication/main/java/com/alura/challenge/web/HtmlGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/interfaces/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/interfaces/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/service/ImdbMovieJsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/service/ImdbMovieJsonParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alura/challenge/web/HtmlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alura/challenge/web/HtmlGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

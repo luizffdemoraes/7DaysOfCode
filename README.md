@@ -151,3 +151,26 @@ public class ImdbMovieJsonParser implements JsonParser{
 }
 
 Resumindo, você criará duas abstrações: uma para o seu modelo chamado de Content e outra para o JsonParser. Basta que futuras implementações sigam essas interfaces e o seu gerador de HTML continuará funcionando! Ou seja, você desacoplou o parseamento do JSON da geração de HTML.
+
+## 7 - Desafio
+
+-  O sétimo desafio é ordenar os filmes com base em outro critério, talvez pela ordem alfabética do nome ou pelo ano.
+
+## Solução
+
+1. Implemente a interface Comparable<? extends Content> na classe (ou record) Movie (e também na classe Series, se você a tiver criado).
+   Para começar, você pode implementar o método usando a nota (rating) como parâmetro de comparação. Por exemplo:
+
+   public int compareTo(Content outro) {
+     return this.rating().compareTo(outro.rating());
+   }
+
+   No método main, para ordenar a lista e gerar o HTML, use:
+
+   Collections.sort(contentList);
+
+   
+
+2. O método sort() está sobrecarregado, então você pode passar um Comparator como segundo parâmetro para inverter a lista:
+
+   Collections.sort(contentList, Comparator.reverseOrder());
